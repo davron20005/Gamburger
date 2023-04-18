@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700;900&family=Roboto:wght@700&display=swap");
+:root {
+  --green: #69cf17;
+  --raleway: "Raleway", sans-serif;
+  --roboto: "Roboto", sans-serif;
+  --col-1: calc(100% / 12 * 1);
+  --col-2: calc(100% / 12 * 2);
+  --col-3: calc(100% / 12 * 3);
+  --col-4: calc(100% / 12 * 4);
+  --col-5: calc(100% / 12 * 5);
+  --col-6: calc(100% / 12 * 6);
+  --col-7: calc(100% / 12 * 7);
+  --col-8: calc(100% / 12 * 8);
+  --col-9: calc(100% / 12 * 9);
+  --col-10: calc(100% / 12 * 10);
+  --col-11: calc(100% / 12 * 11);
+  --col-12: calc(100% / 12 * 12);
+}
+
+body {
+  font-family: var(--raleway);
+  background-color: #060002;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-12 {
+  width: var(--col-12);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-4 {
+  width: var(--col-4);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.d-flex {
+  display: flex;
+}
+/* justify-content */
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+
+/* align-items */
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+header {
+  background: url("./img/header.jpg") no-repeat center bottom / cover;
+  height: 770px;
+}
+header nav .logo {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #4e9f0d;
+  border: 3px solid var(--green);
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+header nav ul li {
+  margin: 0 26px;
+}
+header nav ul li a {
+  padding: 37px 10px 30px 10px;
+  display: block;
+  color: var(--green);
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+  transition: 500ms;
+  cursor: pointer;
+}
+header nav ul li a:hover {
+  background-color: rgba(79, 155, 17, 0.75);
+  color: #fff;
+}
+header nav ul li a span {
+  background-color: #fff;
+  color: var(--green);
+  width: 25px;
+  height: 25px;
+  margin-left: 7px;
+  border-radius: 50%;
+}
+header h1 {
+  color: var(--green);
+  font-size: 72px;
+  text-transform: uppercase;
+  margin-top: 150px;
+  font-weight: 900;
+}
+
+header p:first-of-type {
+  color: var(--green);
+  font-size: 36px;
+  margin: 20px 0 30px 0;
+}
+header p:nth-of-type(2) {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #dedede;
+}
+header p:last-of-type {
+  padding: 30px 60px;
+  background-color: rgba(99, 175, 45, 0.75);
+  font-size: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  margin-top: 75px;
+}
+/* header p:first-of-type{
+    background-color: red;
+} */
+/* header p:last-of-type{
+    background-color: red;
+  } */
+section .section_menu ul {
+  margin: 50px 0 70px;
+}
+section .section_menu ul li {
+  margin-right: 50px;
+}
+section .section_menu ul li a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #7a7a7a;
+  transition: 500ms ease;
+}
+section .section_menu ul li a:hover,
+section .section_menu ul li .active {
+  color: var(--green);
+}
+
+section .section_menu .section_img {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+section .section_menu .section_img .section_price span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px 60px;
+  background-color: rgba(105, 207, 23, 0.75);
+  color: #dedede;
+  font-size: 24px;
+  font-weight: 400;
+}
+section .section_menu .section_img button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(98, 190, 24, 0.9);
+    opacity: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+section .section_menu .section_img:hover button {
+    transition: 500ms ease;
+    cursor: pointer;
+    opacity: 1;
+}
+section .section_menu .section_img:hover span {
+    transition: 500ms ease;
+    opacity: 0;
+}
+
+section .section_menu h3{
+    font-size: 24px;
+    color: var(--green);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+section .section_menu p{
+    font-size: 16px;
+    color: #dedede;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 50px;
+}
+
+section .section_center {
+    width: 100%;
+    padding-top: 50px;
+    background: url("./img/secion.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+}
+section .section_center h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 75px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section .section_center h2::after{
+    content: "";
+    display: block;
+    margin-top: 20px;
+    width: 200px;
+    height: 1px;
+    background-color: var(--green);
+}
+section .section_center p{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    line-height: 24px;
+}
+section .section_center p:first-of-type{
+    margin-bottom: 30px;
+}
+section .section_center p:last-of-type{
+    margin-bottom: 100px;
+}
